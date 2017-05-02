@@ -10,5 +10,5 @@ import '@angular/router';
 import 'rxjs';
 
 // Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'ngx-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'ngx-bootstrap';
