@@ -8,7 +8,7 @@
     "build": "rimraf public && webpack --config config/webpack.prod.js --progress --profile --bail",
     "ng-watch": "rimraf public && webpack --config config/webpack.dev.js --progress --colors --watch",
     "node-watch": "gulp watch",
-    "nodemon": "nodemon ./dist/server localhost 8080 --watch dist",
+    "nodemon": "nodemon --inspect ./dist/server.js localhost 8080 --watch dist",
     "browser-sync": "browser-sync start --proxy \"localhost:8080\" --serveStatic \"public\" --files \"public\" \"dist\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
