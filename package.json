@@ -1,20 +1,19 @@
 {
   "name": "express-ng2",
   "version": "1.0.0",
-  "description": "",
-  "main": "boot.js",
+  "description": "An express/angular starter",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
+    "start": "concurrently \"npm run ng-watch\" \"npm run node-watch\" \"npm run nodemon\" \"npm run browser-sync\"  --kill-others",
     "build": "rimraf public && webpack --config config/webpack.prod.js --progress --profile --bail",
     "ng-watch": "rimraf public && webpack --config config/webpack.dev.js --progress --colors --watch",
     "node-watch": "gulp watch",
     "nodemon": "nodemon ./dist/server localhost 8080 --watch dist",
     "browser-sync": "browser-sync start --proxy \"localhost:8080\" --serveStatic \"public\" --files \"public\" \"dist\"",
-    "dev": "concurrently \"npm run ng-watch\" \"npm run node-watch\" \"npm run nodemon\" \"npm run browser-sync\"  --kill-others",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Alex McKenzie",
+  "license": "MIT",
   "dependencies": {
     "@angular/common": "^4.1.0",
     "@angular/compiler": "^4.1.0",
