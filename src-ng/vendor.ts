@@ -12,3 +12,6 @@ import 'rxjs';
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'ngx-bootstrap';
+
+// FA
+import 'font-awesome/css/font-awesome.min.css';
